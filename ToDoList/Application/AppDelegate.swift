@@ -11,11 +11,33 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        initializeTableViewAppearance()
         return true
+    }
+
+    func initializeTableViewAppearance() {
+
+        let tableViewAppearance = UITableView.appearance()
+        tableViewAppearance.separatorColor = .clear
+        tableViewAppearance.sectionHeaderHeight = UITableView.automaticDimension
+        tableViewAppearance.estimatedSectionHeaderHeight = UITableView.automaticDimension
+        tableViewAppearance.rowHeight = UITableView.automaticDimension
+        tableViewAppearance.estimatedRowHeight = UITableView.automaticDimension
+        tableViewAppearance.backgroundColor = .backgroundApp
+
+        let tableViewCellAppearance = UITableViewCell.appearance()
+        tableViewCellAppearance.selectionStyle = .none
+        tableViewCellAppearance.backgroundColor = .backgroundComponents
+
+        let toolBarAppearance = UIToolbar.appearance()
+        toolBarAppearance.barStyle = UIBarStyle.default
+        toolBarAppearance.isTranslucent = false
+        toolBarAppearance.tintColor = .backgroundComponents
+        toolBarAppearance.barTintColor = .priority
+
+        let pickerViewAppearance = UIPickerView.appearance()
+        pickerViewAppearance.backgroundColor = .backgroundComponents
     }
 
     // MARK: UISceneSession Lifecycle

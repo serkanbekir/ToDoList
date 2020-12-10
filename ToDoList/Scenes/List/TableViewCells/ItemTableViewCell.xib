@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="86" id="KGk-i7-Jjw" customClass="ItemTableViewCell" customModule="ToDoList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="322" height="86"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="322" height="86"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zb2-y9-3fa">
+                        <rect key="frame" x="16" y="16" width="252" height="34"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <color key="textColor" name="TextPrimary"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJX-8f-yCY">
+                        <rect key="frame" x="16" y="52" width="252" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" name="TextPrimary"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mr4-JP-jA3">
+                        <rect key="frame" x="284" y="32.5" width="26" height="21.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                        <color key="textColor" name="Priority"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Mr4-JP-jA3" secondAttribute="bottom" constant="16" id="3dc-La-jdT"/>
+                    <constraint firstAttribute="trailing" secondItem="Mr4-JP-jA3" secondAttribute="trailing" constant="12" id="GGV-ib-ADT"/>
+                    <constraint firstItem="NJX-8f-yCY" firstAttribute="leading" secondItem="zb2-y9-3fa" secondAttribute="leading" id="Mmr-RL-UFb"/>
+                    <constraint firstItem="Mr4-JP-jA3" firstAttribute="leading" secondItem="zb2-y9-3fa" secondAttribute="trailing" constant="16" id="SbE-1x-5Dw"/>
+                    <constraint firstItem="Mr4-JP-jA3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Seq-K1-bW6"/>
+                    <constraint firstItem="Mr4-JP-jA3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="TiZ-lZ-FHw"/>
+                    <constraint firstItem="Mr4-JP-jA3" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="30/375" id="U9K-W2-zFl"/>
+                    <constraint firstItem="zb2-y9-3fa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="W0R-Cc-ImD"/>
+                    <constraint firstItem="zb2-y9-3fa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="X86-W5-Zrw"/>
+                    <constraint firstAttribute="bottom" secondItem="NJX-8f-yCY" secondAttribute="bottom" constant="16" id="YDJ-d8-qjN"/>
+                    <constraint firstItem="NJX-8f-yCY" firstAttribute="top" secondItem="zb2-y9-3fa" secondAttribute="bottom" constant="2" id="YHS-HJ-wCY"/>
+                    <constraint firstItem="NJX-8f-yCY" firstAttribute="width" secondItem="zb2-y9-3fa" secondAttribute="width" id="u24-Gg-0IY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="priorityLabel" destination="Mr4-JP-jA3" id="Euy-oI-Eoc"/>
+                <outlet property="subtitleLabel" destination="NJX-8f-yCY" id="ajc-p8-feg"/>
+                <outlet property="titleLabel" destination="zb2-y9-3fa" id="rQk-vK-1Sd"/>
+            </connections>
+            <point key="canvasLocation" x="139.13043478260872" y="109.82142857142857"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Priority">
+            <color red="0.023529411764705882" green="0.023529411764705882" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextPrimary">
+            <color red="0.21568627450980393" green="0.2196078431372549" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
